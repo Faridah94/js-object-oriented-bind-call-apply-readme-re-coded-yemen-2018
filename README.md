@@ -27,17 +27,16 @@ As we see above, when the `greet` function is invoked as a function, `this` is t
 
 ```js
 function greet() {
-  console.log(`my name is ${this.name}, hi!`);
+    console.log(`my name is ${this.name}, hi!`);
 }
-
-let sally = {name: 'sally'}
-
-greet.apply(sally)
-// my name is sally, hi!
-
-greet.call(sally)
-// my name is sally, hi!
-
+ 
+let sally = { name: 'Sally' };
+ 
+greet.call(sally);
+// my name is Sally, hi!
+ 
+greet.apply(sally);
+// my name is Sally, hi!
 ```
 
 As you see above, we can use `call()` or `apply()` to invoke a function with an explicit value for `this`.  So, instead of invoking the `greet()` function directly, we're invoking the `call()` method or the `apply()` method of the `greet` function.  And yes, our `greet` function can have a method, because in JavaScript functions are first class objects.   
