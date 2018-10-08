@@ -10,18 +10,17 @@ In our exploration of `this`, we saw how it can change depending on how it is ca
 
 ```js
 function greet() {
-  console.log(`my name is ${this.name}, hi!`);
+    console.log(`my name is ${this.name}, hi!`);
 }
-greet()
-// "my name is , hi!"
-
+ 
+greet(); // my name is , hi!
+ 
 let person = {
-  name: 'bob',
-  greet: greet
-}
-
-person.greet()
-// my name is bob, hi!
+    name: 'Bob',
+    greet: greet
+};
+ 
+person.greet(); // my name is Bob, hi!
 ```
 
 As we see above, when the `greet` function is invoked as a function, `this` is the global scope.  However, when greet is invoked as a method of an object `this` changes to equal the object receiving the method call.  One thing we have yet to explore, is how Javascript allows us to set `this` to equal whatever we want.  Let's look at that.
