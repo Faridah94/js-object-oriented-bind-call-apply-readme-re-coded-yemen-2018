@@ -51,7 +51,7 @@ Let's modify our `greet` function to be a little friendlier:
 ```js
 
 function greet(customerOne, customerTwo) {
-  console.log(`Hi ${customerOne} and ${customerTwo}, my name is ${this.name}!`);
+    console.log(`Hi ${customerOne} and ${customerTwo}, my name is ${this.name}!`);
 }
 ```
 
