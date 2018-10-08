@@ -60,14 +60,14 @@ Now, when we invoke `greet`, not only do we need to explicitly set `this`, but w
 Using `call`, we pass the object for `this` as the first argument, followed by any function arguments in order.
 
 ```js
-let sally = {name: 'sally'}
-
+let sally = { name: 'Sally' };
+ 
 function greet(customerOne, customerTwo) {
-  console.log(`Hi ${customerOne} and ${customerTwo}, my name is ${this.name}!`);
+    console.log(`Hi ${customerOne} and ${customerTwo}, my name is ${this.name}!`);
 }
-
-greet.call(sally, "Terry", "George");
-// Hi Terry and George, my name is sally!
+ 
+greet.call(sally, 'Terry', 'George');
+// Hi Terry and George, my name is Sally!
 ```
 
 Great! Now we see the name and the message! What happens if we don't pass any arguments?
