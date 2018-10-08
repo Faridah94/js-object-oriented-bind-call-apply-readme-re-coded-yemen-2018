@@ -74,7 +74,7 @@ Great! Now we see the name and the message! What happens if we don't pass any ar
 
 ```js
 greet.call(sally);
-// Hi undefined and undefined, my name is sally!
+// Hi undefined and undefined, my name is Sally!
 ```
 
 Okay, what about `apply`? So, this works very similar to `call`, except that `apply` only takes two arguments: the value of `this`, and then an *array* of arguments to pass to the target function. So to use `apply` with our new serve object, we'll need to pass that customer value inside an array.
